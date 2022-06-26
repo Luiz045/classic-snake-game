@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Snake Game</title>
+    <link rel="shortcut icon" href="./images/icon.png">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        #content {
+            display: inline-block;
+            position: relative;
+        }
+
+        #developedBy {
+            font-family: Helvetica, sans-serif;
+            font-size: 15px;
+            position: relative;
+            left: 0px;
+            top: 380px;
+        }
+
+        #myName {
+            font-family: 'Brush Script MT', 'Brush Script Std', cursive;
+            font-size: 35px;
+            position: relative;
+            left: 30px;
+            top: 360px;
+        }
+
+        #screem {
+            margin: 1em auto;
+            padding: 1em;
+            border: 3px solid black;
+            border-radius: 12px;
+            background-color: #DCDCDC;
+            font-size: 1.75em;
+            width: 950px;
+            height: 600px;
+            position: relative;
+            left: 400px;
+            top: 0px;
+        }
+
+        #game {
+            display: inline-block;
+            vertical-align: top;
+            width: 600px;
+            height: 600px;
+        }
+
+        #menu {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            width: 300px;
+            height: 600px;
+        }
+
+        #menu p {
+            margin: 0.5em 0;
+            text-align: center;
+        }
+
+        #textScore {
+            position: relative;
+            left: 40px;
+            top: 100px;
+        }
+
+        #start {
+            position: relative;
+            left: 40px;
+            top: 150px;
+        }
+
+        #restart {
+            position: relative;
+            left: 95px;
+            top: 150px;
+        }
+
+        #score {
+            color: green;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="content">
+
+
+        <div id="screem">
+            <canvas id="game"></canvas>
+            <div id="menu">
+                <p id="textScore">pontos: <span id="score">0</span></p>
+                <input class="clickableElement" id="start" type="image" src="./images/button-play.png" width=111 height=46
+                    onclick="controller.start()" />
+                <input class="clickableElement" id="restart" type="image" src="./images/button-restart.png" width=111 height=46
+                    onclick="controller.restart()" />
+                <p id="developedBy">developed by </p>
+                <p id="myName">Luiz Henrique </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./game.js"></script>
+    <script src="./listener.js"></script>
+    <script src="./render.js"></script>
+    <script src="./controller.js"></script>
+    <script src="./main.js"></script>
+</body>
+
+</html>
